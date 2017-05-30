@@ -89,12 +89,14 @@
       <WarningLevel>Level3</WarningLevel>
       <Optimization>Disabled</Optimization>
       <PreprocessorDefinitions>WIN32;_DEBUG;_CONSOLE;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <AdditionalIncludeDirectories>C:\Users\Sony\Source\Repos\TP9_LCD_FASE1\Paquetes;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
     </ClCompile>
     <Link>
       <SubSystem>Console</SubSystem>
       <GenerateDebugInformation>true</GenerateDebugInformation>
       <AdditionalLibraryDirectories>C:\Users\Sony\Source\Repos\TP9_LCD_FASE1\Paquetes\i386;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
       <AdditionalDependencies>ftd2xx.lib;%(AdditionalDependencies)</AdditionalDependencies>
+      <IgnoreAllDefaultLibraries>false</IgnoreAllDefaultLibraries>
     </Link>
   </ItemDefinitionGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
@@ -145,8 +147,17 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
+    <ClCompile Include="basicLCD.cpp" />
     <ClCompile Include="lcd.cpp" />
+    <ClCompile Include="lowLCD.cpp" />
     <ClCompile Include="main.cpp" />
+    <ClCompile Include="mySleep.cpp" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="basicLCD.h" />
+    <ClInclude Include="lcd.h" />
+    <ClInclude Include="lowLCD.h" />
+    <ClInclude Include="mySleep.h" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">
